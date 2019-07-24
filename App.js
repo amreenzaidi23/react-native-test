@@ -26,7 +26,7 @@ class HomeScreen extends React.Component {
   }
 
   componentDidMount(){
-    return fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=aWoy0BuCpFQqMh8tKlRomcp80fFhlA6I')
+    return fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=?')
       .then((response) => response.json())
       .then((responseJson) => {
 
