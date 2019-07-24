@@ -34,8 +34,6 @@ class HomeScreen extends React.Component {
         this.setState({
           isLoading: false,
           dataSource: responseJson.results,
-        }, function(){
-
         });
 
       })
@@ -58,13 +56,12 @@ class HomeScreen extends React.Component {
 
     return(
    
-      <View style={{flex: 1, paddingTop:20}}>
+      <View style={{flex: 10, paddingTop:20}}>
         <FlatList
           data={this.state.dataSource}
           renderItem={({item}) => <Text style={styles.SectionHeader} onPress={this.GetSectionListItem.bind(this, item.abstract)}>{item.title} {'\n\n'}<Text style={styles.SectionHeader1}>{item.source}                           {item.published_date}</Text></Text> 
          
           }
-          keyExtractor={({id}, index) => id}
         />
       </View>
       
@@ -75,7 +72,7 @@ class HomeScreen extends React.Component {
 
 const RootStack = createStackNavigator(
   {
-    Home: HomeScreen,
+    Home: HomeScreen
     
   },
   {
