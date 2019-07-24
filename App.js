@@ -26,7 +26,7 @@ class HomeScreen extends React.Component {
   }
 
   componentDidMount(){
-    return fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=?')
+    return fetch('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=aWoy0BuCpFQqMh8tKlRomcp80fFhlA6I')
       .then((response) => response.json())
       .then((responseJson) => {
 
@@ -46,14 +46,7 @@ class HomeScreen extends React.Component {
 
   render(){
 
-    if(this.state.isLoading){
-      return(
-        <View style={{flex: 1, padding: 20}}>
-          <ActivityIndicator/>
-        </View>
-      )
-    }
-
+    
     return(
    
       <View style={{flex: 10, paddingTop:20}}>
