@@ -71,53 +71,12 @@ class HomeScreen extends React.Component {
     );
   }
 }
-class DetailsScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    return {
-      title: navigation.getParam('otherParam', 'A Nested Details Screen'),
-    };
-  };
 
-  render() {
-    /* 2. Get the param, provide a fallback value if not available */
-    const { navigation } = this.props;
-    const itemId = navigation.getParam('itemId', 'NO-ID');
-    const otherParam = navigation.getParam('otherParam', 'some default value');
-
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
-        <Text>itemId: {JSON.stringify(itemId)}</Text>
-        <Text>otherParam: {JSON.stringify(otherParam)}</Text>
-        <Button
-          title="Go to Details... again"
-          onPress={() =>
-            this.props.navigation.push('Details', {
-              itemId: Math.floor(Math.random() * 100),
-            })}
-        />
-        <Button
-          title="Update the title"
-          onPress={() =>
-            this.props.navigation.setParams({ otherParam: 'Updated!' })}
-        />
-        <Button
-          title="Go to Home"
-          onPress={() => this.props.navigation.navigate('Home')}
-        />
-        <Button
-          title="Go back"
-          onPress={() => this.props.navigation.goBack()}
-        />
-      </View>
-    );
-  }
-}
 
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
-    Details: DetailsScreen,
+    
   },
   {
     initialRouteName: 'Home',
@@ -132,14 +91,7 @@ export default class App extends React.Component {
   }
 }
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      backgroundColor: "#e5e5e5",
-      borderRadius: 4,
-    borderWidth: 5.5,
-    borderColor: '#0000'
-    },
+    
     SectionHeader:{
       backgroundColor : '#64B5F6',
       fontSize : 18,
@@ -159,11 +111,5 @@ const styles = StyleSheet.create({
        borderRadius: 4,
     borderWidth: 5.5,
     borderColor: '#0000'
-   },
-    SectionListItemS:{
-      fontSize : 16,
-      padding: 6,
-      color: '#000',
-      backgroundColor : '#F5F5F5'
-  }
+   }
 });
