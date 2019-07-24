@@ -4,7 +4,7 @@
 
     Need to install Nodejs, npm, create-react-native-app, java8, react-native-cli, expo.
     
-#2.Clone the project into local system to build and run. Then go to App.js and update the "api-key" replace "?"  with api-key.
+#2.Clone the project into local system to build and run. Then go to App.js and update the "api-key"(as mentioned in email to suneeta) replace "?"  with api-key.
 
 #3.Run app 
       
