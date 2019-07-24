@@ -10,5 +10,13 @@
       
        go to downloaded app folder and run command "npm start" 
        > npm start
-       it will start Expo client and you can use 
+       it will start Expo client and you can use expo app or android samulation to see your application.
+       
+       if you want to test application you can go to https://snack.expo.io/@react-navigation/simple-header-button-v3
+       and pate the code in conlose and click on "run on your device" for this option you should have "Expo app" on your mobile device.
+       
+Now you can use our app on your device.
+
+
+Thanks
        
